@@ -1,0 +1,49 @@
+{
+  "name": "webpack_config",
+  "version": "1.0.0",
+  "description": "Webpack config",
+  "main": "index.js",
+  "scripts": {
+    "dev": "NODE_ENV=dev webpack-dev-server --open --content-base src --hot --inline",
+    "prod": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/js/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Guillaume-duclos/Webpack.git"
+  },
+  "author": "Guillaume Duclos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Guillaume-duclos/Webpack/issues"
+  },
+  "homepage": "https://github.com/Guillaume-duclos/Webpack#readme",
+  "devDependencies": {
+    "autoprefixer": "^7.1.6",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.5",
+    "html-loader": "^0.5.1",
+    "html-webpack-plugin": "^2.30.1",
+    "node-sass": "^4.7.2",
+    "postcss-loader": "^2.0.9",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.0",
+    "uglifyjs-webpack-plugin": "^1.1.1",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4"
+  },
+  "dependencies": {
+    "babel-loader": "^7.1.2",
+    "canvas2svg": "^1.0.16",
+    "cheerio": "^1.0.0-rc.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "nodemon": "^1.17.2",
+    "request": "^2.85.0"
+  }
+}

@@ -7,7 +7,9 @@
     "dev": "NODE_ENV=dev webpack-dev-server --open --content-base src --hot --inline",
     "prod": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon src/js/server.js"
+    "start": "nodemon src/js/server.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -26,6 +28,7 @@
     "css-loader": "^0.28.7",
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.5",
+    "gh-pages": "^1.2.0",
     "html-loader": "^0.5.1",
     "html-webpack-plugin": "^2.30.1",
     "node-sass": "^4.7.2",
@@ -39,11 +42,7 @@
   },
   "dependencies": {
     "babel-loader": "^7.1.2",
-    "canvas2svg": "^1.0.16",
-    "cheerio": "^1.0.0-rc.2",
     "cors": "^2.8.4",
-    "express": "^4.16.3",
-    "nodemon": "^1.17.2",
-    "request": "^2.85.0"
+    "nodemon": "^1.17.2"
   }
 }

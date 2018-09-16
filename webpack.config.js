@@ -22,7 +22,7 @@ if (!dev) {
 let config = {
   entry: './src/js/app.js',
   output: {
-    path: path.resolve(__dirname, './dist'),
+    path: path.resolve(__dirname, './build'),
     filename: 'bundle.js'
   },
   resolve: {
@@ -99,7 +99,7 @@ let config = {
 		//port: '8080',
     //host: '127.0.0.1',
     overlay: true,
-    contentBase: path.join(__dirname, './dist')
+    contentBase: path.join(__dirname, './build')
 	},
 }
 

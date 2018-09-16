@@ -1,5 +1,5 @@
-const path = require('path');
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const path              = require('path');
+const UglifyJSPlugin    = require('uglifyjs-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const dev = process.env.NODE_ENV === "dev";
@@ -45,6 +45,12 @@ let config = {
           }
         }
       },
+      /*{
+        enforce: "pre",
+        test: /\.js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: ['eslint-loader']
+      },*/
       {
         test: /\.js$/,
         exclude: /(node_modules|bower_components)/,
@@ -90,9 +96,9 @@ let config = {
     })
   ],
   devServer: {
-		port: '3001',
-    host: 'localhost',
-    hot: true,
+		//port: '8080',
+    //host: '127.0.0.1',
+    overlay: true,
     contentBase: path.join(__dirname, './dist')
 	},
 }

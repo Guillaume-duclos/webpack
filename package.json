@@ -5,18 +5,17 @@
   "main": "index.js",
   "scripts": {
     "dev": "NODE_ENV=dev webpack-dev-server --open --content-base src --hot --inline",
-    "prod": "webpack",
+    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon src/js/server.js",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "npm run build && git add -A && git commit -nm ':rocket: deploy' && git push && git subtree push --prefix build origin gh-pages"
   },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/Guillaume-duclos/Webpack.git"
   },
   "author": "Guillaume Duclos",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Guillaume-duclos/Webpack/issues"
   },
